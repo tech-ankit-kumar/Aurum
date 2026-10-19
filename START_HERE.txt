@@ -1,0 +1,20 @@
+AURUM FRESH START - WINDOWS SETUP
+
+1. Extract this ZIP to a new folder, for example D:\Aurum_Fresh_Start
+2. Open PowerShell in that folder.
+3. Run: npm install
+4. Run: Copy-Item .env.example .env
+5. Run: notepad .env
+   Set your own UPI_ID and UPI_NAME.
+   Change ADMIN_EMAIL and ADMIN_PASSWORD.
+   Replace JWT_SECRET with a long random secret.
+   Save and close Notepad.
+6. Run: npm start
+7. Open http://localhost:3000
+8. Admin panel: http://localhost:3000/admin/
+
+IMPORTANT:
+- This is a clean source package. It does not include node_modules, your private .env, or any existing database/orders.
+- Keep .env private; do not upload it to GitHub.
+- UPI payments use manual UTR verification. Verify payment in your bank/UPI app before approving.
+- Do not delete the server/data database after you start using the site, or you may lose orders.

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="AURUM — Premium footwear from the world's finest brands.">
+<title>AURUM — Move Your Way</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce">
+  <div class="announce-track">
+    <span>Free shipping on orders above ₹15,000</span><span class="sep">✦</span>
+    <span>New Season Drop </span><span class="sep">✦</span>
+    <span>Extra 10% off with code AURUM10</span><span class="sep">✦</span>
+    <span>Free returns within 30 days</span><span class="sep">✦</span>
+    <span>Free shipping on orders above ₹15,000</span><span class="sep">✦</span>
+    <span>New Season Drop </span><span class="sep">✦</span>
+    <span>Extra 10% off with code AURUM10</span><span class="sep">✦</span>
+    <span>Free returns within 30 days</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand" data-nav>
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M20 2 L38 20 L20 38 L2 20 Z" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M20 8 L32 20 L20 32 L8 20 Z" fill="currentColor" opacity=".08"/>
+        <path d="M20 11 L14 28 M20 11 L26 28 M16.5 22 H23.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">AURUM</span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="active" data-nav>Home</a>
+      <a href="#gender" data-nav>Shop</a>
+      <a href="#brands" data-nav>Brands</a>
+      <a href="#collections" data-nav>Collections</a>
+      <a href="#about" data-nav>About</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-icon" id="searchBtn" aria-label="Search">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="nav-icon" id="wishBtn" aria-label="Wishlist">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        <span class="badge-dot" id="wishCount">0</span>
+      </button>
+      <button class="nav-icon" id="cartBtn" aria-label="Cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="badge-dot" id="cartCount">0</span>
+      </button>
+      <button class="auth-btn" id="loginBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        <span>Login</span>
+      </button>
+      <div class="user-menu" id="userMenu">
+        <button class="user-btn" id="userBtn">
+          <span class="user-avatar" id="userAvatar">A</span>
+          <span class="user-name" id="userName">Account</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown">
+          <div class="user-dropdown-head">
+            <div class="user-avatar-lg" id="userAvatarLg">A</div>
+            <div><strong id="userNameFull">User</strong><small id="userEmailDisplay">user@example.com</small></div>
+          </div>
+          <div class="user-dropdown-body">
+            <button class="dropdown-item" id="myOrdersBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>My Orders</button>
+            <button class="dropdown-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>Wishlist</button>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item danger" id="logoutBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>Logout</button>
+          </div>
+        </div>
+      </div>
+      <button class="menu-btn" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-shape hero-shape-1"></div>
+  <div class="hero-shape hero-shape-2"></div>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span class="dot"></span> New Season  — Limited Drop</div>
+      <h1 class="hero-title">Move<br><em>Your Way.</em></h1>
+      <p class="hero-desc">Everyday footwear, engineered for comfort — built for modern movement. Sourced from the world's finest brands.</p>
+      <div class="hero-cta">
+        <button class="btn btn-dark" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop New Arrivals <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="btn btn-plain" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">Explore Collections →</button>
+      </div>
+      <div class="hero-metrics">
+        <div><strong>60+</strong><span>Premium Styles</span></div>
+        <div class="divider"></div>
+        <div><strong>11</strong><span>Global Brands</span></div>
+        <div class="divider"></div>
+        <div><strong>4.9★</strong><span>Avg Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-showcase">
+        <div class="hero-badge"><div class="hero-badge-label">Daily 01</div><div class="hero-badge-price" id="heroPrice">₹11,895</div></div>
+        <div class="hero-slides" id="heroSlides"></div>
+        <div class="hero-brand-strip">
+          <div class="hero-brand-active" id="heroBrand">NIKE</div>
+          <div class="hero-brand-model" id="heroModel">Air Force 1 '07</div>
+        </div>
+        <div class="hero-dots" id="heroDots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST MARQUEE -->
+<section class="trust-strip">
+  <div class="trust-inner"><div class="trust-track" id="trustTrack"></div></div>
+</section>
+
+<!-- ✅ NEW — SHOP BY GENDER -->
+<section class="gender-section" id="gender">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-label">Shop By</span>
+        <h2>For <em>Everyone</em></h2>
+      </div>
+      <p class="section-desc">Curated collections for Him, Her, and the little ones — because great style has no age.</p>
+    </div>
+    <div class="gender-grid">
+      <article class="gender-card" data-gender="Men">
+        <div class="gender-img">
+          <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=900&q=85&auto=format&fit=crop" alt="Men's shoes">
+        </div>
+        <div class="gender-overlay">
+          <span class="gender-tag">For Him</span>
+          <h3>Men's Collection</h3>
+          <p>Sizes 6–13 · 40+ styles</p>
+          <span class="gender-link">Shop Men →</span>
+        </div>
+      </article>
+      <article class="gender-card" data-gender="Women">
+        <div class="gender-img">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=900&q=85&auto=format&fit=crop" alt="Women's shoes">
+        </div>
+        <div class="gender-overlay">
+          <span class="gender-tag">For Her</span>
+          <h3>Women's Collection</h3>
+          <p>Sizes 5–10 · 25+ styles</p>
+          <span class="gender-link">Shop Women →</span>
+        </div>
+      </article>
+      <article class="gender-card" data-gender="Kids">
+        <div class="gender-img">
+          <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=900&q=85&auto=format&fit=crop" alt="Kids shoes">
+        </div>
+        <div class="gender-overlay">
+          <span class="gender-tag">For Little Ones</span>
+          <h3>Kids' Collection</h3>
+          <p>Sizes 1–6 · 15+ styles</p>
+          <span class="gender-link">Shop Kids →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ADVERTISEMENT (Model Section) -->
+<section class="ad-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-label">Styled By AURUM</span>
+        <h2>Worn by <em>Everyone</em></h2>
+      </div>
+      <p class="section-desc">From boardrooms to basketball courts, playgrounds to marathons — find the pair that moves with you.</p>
+    </div>
+    <div class="ad-grid">
+      <article class="ad-card" data-cat="Running">
+        <div class="ad-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=85&auto=format&fit=crop" alt="Men Running"></div>
+        <div class="ad-overlay"><span class="ad-tag">For Him</span><h3>Built for the Long Run</h3><p>Men's running collection · Sizes 6–13</p><span class="ad-link">Shop Men's Running →</span></div>
+      </article>
+      <article class="ad-card" data-cat="Lifestyle">
+        <div class="ad-img"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=85&auto=format&fit=crop" alt="Women Lifestyle"></div>
+        <div class="ad-overlay"><span class="ad-tag">For Her</span><h3>Effortless Everyday</h3><p>Women's lifestyle picks · Sizes 5–10</p><span class="ad-link">Shop Women's Lifestyle →</span></div>
+      </article>
+      <article class="ad-card" data-cat="Sneakers">
+        <div class="ad-img"><img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&q=85&auto=format&fit=crop" alt="Kids Sneakers"></div>
+        <div class="ad-overlay"><span class="ad-tag">For Kids</span><h3>Playground Ready</h3><p>Kids' sneakers · Sizes 1–6</p><span class="ad-link">Shop Kids' Sneakers →</span></div>
+      </article>
+      <article class="ad-card" data-cat="Formal">
+        <div class="ad-img"><img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=800&q=85&auto=format&fit=crop" alt="Formal"></div>
+        <div class="ad-overlay"><span class="ad-tag">For the Boardroom</span><h3>Formal Elegance</h3><p>Oxfords · Derbies · Brogues</p><span class="ad-link">Shop Formal →</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ UPDATED — FEATURED with PRICE RANGE -->
+<section class="featured">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-label">Featured Collections</span>
+        <h2>Shop by <em>Price Range</em></h2>
+      </div>
+      <a href="#shop" class="link-arrow" data-nav>VIEW ALL →</a>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="section shop-section" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-label">Full Collection</span>
+        <h2>Shop <em>All Products</em></h2>
+      </div>
+      <p class="section-desc" id="shopCount">Showing 12 of 60 products</p>
+    </div>
+    <div class="filter-bar">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="nike">Nike</button>
+        <button class="filter-tab" data-filter="adidas">Adidas</button>
+        <button class="filter-tab" data-filter="puma">Puma</button>
+        <button class="filter-tab" data-filter="newbalance">New Balance</button>
+        <button class="filter-tab" data-filter="asics">Asics</button>
+        <button class="filter-tab" data-filter="reebok">Reebok</button>
+        <button class="filter-tab" data-filter="skechers">Skechers</button>
+        <button class="filter-tab" data-filter="one8">one8</button>
+        <button class="filter-tab" data-filter="clarks">Clarks</button>
+        <button class="filter-tab" data-filter="hushpuppies">Hush Puppies</button>
+      </div>
+      <div class="filter-sort">
+        <label>Sort</label>
+        <select id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+    <div class="load-more-wrap"><button class="btn btn-outline" id="loadMore">Load More Products</button></div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section brands-section" id="brands">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-label">World-Class Brands</span>
+        <h2>Brands We <em>Carry</em></h2>
+      </div>
+      <p class="section-desc">The names that defined footwear culture — available in one place.</p>
+    </div>
+    <div class="brands-grid" id="brandsGrid"></div>
+  </div>
+</section>
+
+<!-- ✅ UPDATED — COLLECTIONS with FORMAL + LOAFERS -->
+<section class="section collections-section" id="collections">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-label">Curated Collections</span>
+        <h2>Shop by <em>Category</em></h2>
+      </div>
+      <a href="#shop" class="link-arrow" data-nav>VIEW ALL →</a>
+    </div>
+    <div class="collection-grid">
+      <article class="collection-card big" data-cat="Lifestyle">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=85&auto=format&fit=crop" alt="Lifestyle">
+        <div class="collection-overlay">
+          <span class="collection-tag">15+ Styles</span>
+          <h3>Lifestyle</h3>
+          <p>Everyday luxury, redefined</p>
+          <span class="collection-link">Discover →</span>
+        </div>
+      </article>
+      <article class="collection-card" data-cat="Running">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=85&auto=format&fit=crop" alt="Running">
+        <div class="collection-overlay">
+          <span class="collection-tag">12 Styles</span>
+          <h3>Running</h3>
+          <p>Engineered for speed</p>
+          <span class="collection-link">Discover →</span>
+        </div>
+      </article>
+      <article class="collection-card" data-cat="Training">
+        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=85&auto=format&fit=crop" alt="Training">
+        <div class="collection-overlay">
+          <span class="collection-tag">6 Styles</span>
+          <h3>Training</h3>
+          <p>Built for the gym floor</p>
+          <span class="collection-link">Discover →</span>
+        </div>
+      </article>
+      <article class="collection-card" data-cat="Walking">
+        <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=85&auto=format&fit=crop" alt="Walking">
+        <div class="collection-overlay">
+          <span class="collection-tag">4 Styles</span>
+          <h3>Walking</h3>
+          <p>All-day comfort</p>
+          <span class="collection-link">Discover →</span>
+        </div>
+      </article>
+      <article class="collection-card" data-cat="Formal">
+        <img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=800&q=85&auto=format&fit=crop" alt="Formal">
+        <div class="collection-overlay">
+          <span class="collection-tag">8 Styles</span>
+          <h3>Formal Shoes</h3>
+          <p>Oxfords & derbies</p>
+          <span class="collection-link">Discover →</span>
+        </div>
+      </article>
+      <article class="collection-card" data-cat="Loafers">
+        <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=800&q=85&auto=format&fit=crop" alt="Loafers">
+        <div class="collection-overlay">
+          <span class="collection-tag">6 Styles</span>
+          <h3>Loafer Shoes</h3>
+          <p>Effortless slip-on style</p>
+          <span class="collection-link">Discover →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800&q=85&auto=format&fit=crop" alt="About AURUM">
+        <div class="about-tag"><span>↗</span> Visit Site</div>
+      </div>
+      <div class="about-content">
+        <span class="section-label">Our Story</span>
+        <h2>Designed for the <em>distance</em> between plans.</h2>
+        <p>AURUM was born from a simple belief — that great footwear should be accessible without compromise. We work directly with the world's finest brands to bring you pieces that move with you.</p>
+        <p>From everyday essentials to limited drops, every pair in our collection is handpicked for quality, comfort, and timeless design.</p>
+        <div class="about-stats">
+          <div><strong>11</strong><span>Global Brands</span></div>
+          <div><strong>60+</strong><span>Curated Styles</span></div>
+          <div><strong>50K+</strong><span>Happy Clients</span></div>
+        </div>
+        <a href="#shop" class="btn btn-dark" data-nav>Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <span class="section-label">Stay Connected</span>
+      <h2>Join the <em>AURUM</em> Circle</h2>
+      <p>Be the first to know about new drops, exclusive offers, and style inspiration.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe →</button>
+      </form>
+      <small>No spam. Unsubscribe anytime.</small>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ UPDATED FOOTER — with working links -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="brand" data-nav>
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+            <path d="M20 2 L38 20 L20 38 L2 20 Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M20 8 L32 20 L20 32 L8 20 Z" fill="currentColor" opacity=".08"/>
+            <path d="M20 11 L14 28 M20 11 L26 28 M16.5 22 H23.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">AURUM</span>
+        </a>
+        <p>Premium footwear for those who believe every step should feel extraordinary.</p>
+        <div class="socials">
+          <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22.5 7.5a3 3 0 0 0-2.1-2.1C18.6 5 12 5 12 5s-6.6 0-8.4.4A3 3 0 0 0 1.5 7.5 31 31 0 0 0 1 12a31 31 0 0 0 .5 4.5 3 3 0 0 0 2.1 2.1C5.4 19 12 19 12 19s6.6 0 8.4-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-4.5z"/><path d="m10 15 5-3-5-3z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop" data-gender-link="Men">Men</a></li>
+          <li><a href="#shop" data-gender-link="Women">Women</a></li>
+          <li><a href="#shop" data-gender-link="Kids">Kids</a></li>
+          <li><a href="#shop" data-filter-link="all">New Arrivals</a></li>
+          <li><a href="#shop" data-filter-link="sale">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#shop" data-cat-link="Lifestyle">Lifestyle</a></li>
+          <li><a href="#shop" data-cat-link="Running">Running</a></li>
+          <li><a href="#shop" data-cat-link="Formal">Formal Shoes</a></li>
+          <li><a href="#shop" data-cat-link="Loafers">Loafer Shoes</a></li>
+          <li><a href="#shop" data-cat-link="Training">Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#brands" data-nav>Brands</a></li>
+          <li><a href="#collections" data-nav>Collections</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 AURUM. All rights reserved.</span>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Bag <span id="cartItemCount">(0)</span></h3>
+    <button class="icon-btn" id="closeCart" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer">
+    <div class="cart-summary">
+      <div><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+      <div><span>Shipping</span><span>Free</span></div>
+      <div class="total-row"><span>Total</span><span id="cartTotal">₹0</span></div>
+    </div>
+    <button class="btn btn-dark btn-full" id="checkoutBtn">Proceed to Checkout →</button>
+  </div>
+</aside>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-backdrop" id="productModal">
+  <div class="modal-box product-modal-box">
+    <button class="modal-close" id="closeProduct"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="product-modal-content" id="productModalContent"></div>
+  </div>
+</div>
+
+<!-- AUTH MODAL -->
+<div class="modal-backdrop" id="authModal">
+  <div class="modal-box auth-modal-box">
+    <button class="modal-close" id="closeAuth"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="auth-visual">
+      <div class="auth-visual-inner">
+        <svg class="brand-mark big" viewBox="0 0 40 40" fill="none">
+          <path d="M20 2 L38 20 L20 38 L2 20 Z" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M20 8 L32 20 L20 32 L8 20 Z" fill="currentColor" opacity=".1"/>
+          <path d="M20 11 L14 28 M20 11 L26 28 M16.5 22 H23.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <h3>Welcome to<br><em>AURUM</em></h3>
+        <p>Where every step tells a story.</p>
+      </div>
+    </div>
+    <div class="auth-form-wrap">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Login</button>
+        <button class="auth-tab" data-tab="signup">Create Account</button>
+      </div>
+      <form class="auth-form active" id="loginForm" autocomplete="off">
+        <h4>Welcome back</h4><p>Sign in to continue your journey.</p>
+        <div class="field"><label>Email</label><input type="email" id="loginEmail" placeholder="you@example.com" required></div>
+        <div class="field"><label>Password</label><input type="password" id="loginPassword" placeholder="Enter password" required minlength="6"></div>
+        <div class="field-row"><label class="check"><input type="checkbox"> Remember me</label><a href="#" class="link">Forgot?</a></div>
+        <button type="submit" class="btn btn-dark btn-full">Sign In →</button>
+        <p class="auth-alt">New here? <a href="#" data-switch="signup">Create an account</a></p>
+      </form>
+      <form class="auth-form" id="signupForm" autocomplete="off">
+        <h4>Create your account</h4><p>Join AURUM and unlock premium benefits.</p>
+        <div class="field"><label>Full Name</label><input type="text" id="signupName" placeholder="Your name" required></div>
+        <div class="field"><label>Email</label><input type="email" id="signupEmail" placeholder="you@example.com" required></div>
+        <div class="field"><label>Password</label><input type="password" id="signupPassword" placeholder="Min. 8 characters" required minlength="6"></div>
+        <label class="check"><input type="checkbox" required> I agree to the Terms & Privacy Policy</label>
+        <button type="submit" class="btn btn-dark btn-full">Create Account →</button>
+        <p class="auth-alt">Already have an account? <a href="#" data-switch="login">Sign in</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH MODAL -->
+<div class="modal-backdrop" id="searchModal">
+  <div class="modal-box search-modal-box">
+    <button class="modal-close" id="closeSearch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="search-wrapper">
+      <div class="search-input-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Search shoes, brands, models..." autocomplete="off">
+        <kbd>ESC</kbd>
+      </div>
+      <div class="search-hints" id="searchHints">
+        <span class="search-hint-label">Popular:</span>
+        <button class="search-chip" data-search="nike">Nike</button>
+        <button class="search-chip" data-search="samba">Samba</button>
+        <button class="search-chip" data-search="formal">Formal</button>
+        <button class="search-chip" data-search="loafer">Loafer</button>
+        <button class="search-chip" data-search="running">Running</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WISHLIST MODAL -->
+<div class="modal-backdrop" id="wishlistModal">
+  <div class="modal-box wishlist-modal-box">
+    <button class="modal-close" id="closeWishlist" type="button" aria-label="Close wishlist"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="wishlist-wrap">
+      <div class="wishlist-header"><div><span class="eyebrow">SAVED FOR LATER</span><h3>My Wishlist</h3><p class="checkout-sub">Your favourite products, all in one place.</p></div></div>
+      <div class="wishlist-list" id="wishlistList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-backdrop" id="checkoutModal">
+  <div class="modal-box checkout-modal-box">
+    <button class="modal-close" id="closeCheckout" type="button" aria-label="Close checkout"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="checkout-grid">
+      <div class="checkout-form-wrap">
+        <h3>Checkout</h3><p class="checkout-sub">Complete your order in just a few steps.</p>
+        <form id="checkoutForm" class="checkout-form">
+          <div class="checkout-step">
+            <div class="step-head"><span>1</span> Shipping Details</div>
+            <div class="saved-address-bar">
+              <div class="saved-address-copy"><strong>Saved Addresses</strong><span>Select a saved address to fill all details instantly.</span></div>
+              <select id="savedAddressSelect" aria-label="Saved address">
+                <option value="">New address</option>
+              </select>
+            </div>
+            <div class="field-row-2">
+              <div class="field"><label>Full Name</label><input type="text" id="ckName" placeholder="Your name" autocomplete="name" required></div>
+              <div class="field"><label>Phone</label><input type="tel" id="ckPhone" placeholder="+91 98765 43210" autocomplete="tel" required></div>
+            </div>
+            <div class="field"><label>Email</label><input type="email" id="ckEmail" placeholder="you@example.com" autocomplete="email" readonly></div>
+            <div class="field"><label>Address</label><input type="text" id="ckAddress" placeholder="Street, building, apartment" autocomplete="street-address" required></div>
+            <div class="field-row-2">
+              <div class="field"><label>City</label><input type="text" id="ckCity" placeholder="Meerut" autocomplete="address-level2" required></div>
+              <div class="field"><label>State</label><select id="ckState" autocomplete="address-level1" required><option value="">Select state</option></select></div>
+            </div>
+            <div class="field"><label>Pincode</label><input type="text" id="ckPin" placeholder="250001" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" required></div>
+            <div class="address-save-row"><label class="save-address-option"><input type="checkbox" id="saveAddress" checked><span>Save this address for future orders</span></label></div>
+          </div>
+
+          <div class="checkout-step">
+            <div class="step-head"><span>2</span> Payment Method</div>
+            <div class="payment-methods">
+              <label class="pay-option"><input type="radio" name="payment" value="cod" checked><div class="pay-body"><div class="pay-name">Cash on Delivery</div><div class="pay-desc">Pay when it arrives</div></div></label>
+              <label class="pay-option"><input type="radio" name="payment" value="upi"><div class="pay-body"><div class="pay-name">UPI Payment</div><div class="pay-desc">GPay · PhonePe · Paytm · BHIM — Pay by QR / UPI ID</div></div></label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark btn-full place-order-btn">Place Order →</button>
+        </form>
+      </div>
+      <div class="checkout-summary-wrap">
+        <h4>Order Summary</h4>
+        <div class="checkout-items" id="checkoutItems"></div>
+        <div class="checkout-totals" id="checkoutTotals"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORDERS MODAL -->
+<div class="modal-backdrop" id="ordersModal">
+  <div class="modal-box orders-modal-box">
+    <button class="modal-close" id="closeOrders"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="orders-wrap">
+      <div class="orders-header"><h3>My Orders</h3><p class="checkout-sub">Track and manage all your past orders.</p></div>
+      <div class="orders-list" id="ordersList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

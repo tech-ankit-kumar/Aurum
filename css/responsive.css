@@ -1,0 +1,15 @@
+/* AURUM responsive layout support */
+@media (max-width: 900px) {
+  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .featured-grid, #featuredGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .brand-grid, #brandsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .product-card img, .product-image img { aspect-ratio: 3 / 4; }
+  .featured-grid, #featuredGrid, .brand-grid, #brandsGrid { grid-template-columns: 1fr; }
+  .hero { min-height: 520px; }
+  .hero-content { padding-inline: 20px; }
+  .section, section { scroll-margin-top: 80px; }
+  .container, .section-inner { width: min(100% - 28px, 1280px); }
+}
