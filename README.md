@@ -373,7 +373,7 @@ I build responsive web experiences and practical projects while continuing to de
 
 <p>
   <a href="https://github.com/tech-ankit-kumar"><img src="https://img.shields.io/badge/GitHub-tech--ankit--kumar-181717?style=for-the-badge&logo=github" alt="GitHub profile"></a>
-  <a href="https://www.linkedin.com/in/tech-ankitkumar"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn profile"></a>
+  <a href="https://www.linkedin.com/in/tech-ankit-kumar/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn profile"></a>
 </p>
 
 ---
